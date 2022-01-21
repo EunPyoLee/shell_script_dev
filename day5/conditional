@@ -1,0 +1,23 @@
+#!/bin/sh
+
+# Determine if the user executing this script is the root user or not
+echo "Determine if the user executing this script is the root user or not"
+
+# Dispaly the UID
+echo "Display the UID: \$ echo \"Your UID is \${UID}\""
+echo "UID is built-in variable"
+echo "Your UID is ${UID}"
+
+# Display if the user is the root user or not
+if [[ "${UID}" -eq 0 ]]
+then
+	# let the user do what they want as they are root
+	echo "You are root."
+	echo "Installing software..."
+else
+	echo "Your are not root."
+	echo "You don't have a permission to install any software..."
+fi
+echo ""
+echo "Double bracket [[ ]] is the preferred and new syntax to the single bracket []"
+
