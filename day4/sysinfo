@@ -1,0 +1,33 @@
+#1/bin/bash
+
+# This script displays information about the system on which it is executed
+
+# Tell the user the script is staring.
+echo "Starting the sysinfo script."
+
+# Display the hostname of the system
+echo ""
+echo "Display the hostname of the system: \$ hostname"
+hostname
+echo ""
+
+# Diaply the current date and time when this information was collected.
+echo "Display the current date and time: \$ date"
+date
+echo ""
+
+# Display the kernel release followed by the architecture.
+echo "Display the kernel release: \$ uname -r"
+uname -r # for kernel release
+echo ""
+echo "Display the architecture or machine hardware name: \$ uname -m"
+uname -m # for architecture or machine hardware name
+echo ""
+
+# Display the disk usage in a human readable format.
+echo "Display the disk usage in a human readable format: \$df -h"
+df -h  # disk free with h(uman readable) option
+echo ""
+
+# End the script by letting the user know that it's done.
+echo "the script is done"
