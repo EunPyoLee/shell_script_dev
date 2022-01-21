@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # Determine if the user executing this script is the root user or not
 echo "Determine if the user executing this script is the root user or not"

@@ -1,11 +1,17 @@
-#!/bin/sh
+#!/bin/bash
 
 echo "valid variable names:"
-echo "SKILL\nSKILL1\n_SKILL\n"
+echo "SKILL
+SKILL1
+_SKILL
+"
 echo "starting with letter case or underscore is fine"
 
 echo "invalid variable names:"
-echo "3SKILL\nA-SKILL\nE@MAIL\n"
+echo "3SKILL
+A-SKILL
+E@MAIL
+"
 echo "number cannot be the first letter and no hypen or other special character other than _ (underscore) in any place"
 echo ""
 echo "By the convention, use CAPITAL(upper case) for variable name"
