@@ -1,0 +1,13 @@
+#!/bin/bash
+
+echo "type <command> tells you the type of <command>"
+echo "e.g) $ type echo"
+type echo
+echo "tells echo is a shell builtin"
+echo "if you want to see all instances of <command> on your system"
+echo "then use -a command in type to see \"all\""
+echo "e.g) $ type -a echo"
+type -a echo
+echo "shows you all echo command instances on your system"
+echo "using either of them will be identifical but not recommended"
+echo "e.g) $ /bin/echo something  == $ echo <something>"

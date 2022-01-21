@@ -1,0 +1,8 @@
+#!/bin/bash
+NAME="Jason Lee" # no space before and after the equal sign
+echo "setting variable sytanx is:"
+echo "<variable_name>=\"value\""
+echo "e.g)"
+echo "NAME=\"Jason Lee\""
+echo "$ echo \"Hi my name is \${NAME}\""
+echo "Hi my name is ${NAME}."
