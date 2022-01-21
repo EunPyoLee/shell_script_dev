@@ -1,0 +1,17 @@
+#!/bin/sh
+
+echo "this is day 1 \nhello world"
+
+echo "print ls -l <this_file>"
+ls -l ${pwd}day1
+echo "\n"
+echo "explanation to -rwxrwxr-x"
+echo "        - # is a file"
+echo "        d # is a directory"
+echo "         rwx # first three after -/d is the permission of the owner of the file"
+echo "            rwx # second three for the \"group\" of the file"
+echo "               r-x # last three for the \"everyone else on the system as to this file\""
+echo "\'r\' is read \'w\' is write \'x\' is executable"
+echo "\n"
+echo "explanation to user user <something>"
+echo "<owner> <group> <everyone else on this system that are not \'owenr\' or \'group\'>"
