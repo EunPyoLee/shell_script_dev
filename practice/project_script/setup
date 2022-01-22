@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# setup script for the python project
+# pre-requirement: python 3.8.5 and in its virtual env
+
+pip install -r requirements.txt
+
+INST_RES=$?
+
+if [[ $INST_RES -ne 0 ]]; then
+	echo "Failed to install requirements"
+	exit $INST_RES
+else
+	echo "Successfully installed requirements"
+fi
+
