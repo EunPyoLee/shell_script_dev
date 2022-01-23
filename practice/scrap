@@ -1,0 +1,25 @@
+RES=$(echo ${BASH_VERSION} | grep -o --regexp='[0-9]*\.[0-9]*\.[0-9]*')
+echo ${RES}
+BASH_MAJOR=$(echo ${RES} | cut -d '.' -f 1)
+BASH_MINOR=$(echo ${RES} | cut -d '.' -f 2)
+BASH_PATCH=$(echo ${RES} | cut -d '.' -f 3)
+if [[ -z ${BASH_MINOR} ]]
+then
+	BASH_MINOR=0
+fi
+
+if [[ -z ${BASH_PATCH} ]]
+then
+	BASH_PATCH=0
+fi
+
+# check bash version >= 4.0.0 which supports leading zeros
+if (( $(echo "${BASH_MAJOR} < 4 && ${BASH_MINOR} >= 0 && ${BASH_PATCH} >= 0" | bc -l) )) 
+then
+	echo "You need bash version >= 4.0.0" >&2
+	exit 1
+else
+	echo "Your bash version is compatible"
+fi
+
+echo "Check bash version: success"
